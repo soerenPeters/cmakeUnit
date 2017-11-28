@@ -14,8 +14,6 @@ if(COMMAND tearDown)
   tearDown()
 endif()
 
-set(wasRun ${wasRun} PARENT_SCOPE)
-set(wasSetUp ${wasSetUp} PARENT_SCOPE)
 set(log ${log} PARENT_SCOPE)
 
 endfunction()
