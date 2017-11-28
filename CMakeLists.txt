@@ -1,13 +1,8 @@
 cmake_minimum_required(VERSION 3.9)
 
-include(Assert.cmake)
-include(RunInvoker.cmake)
+include(macros/Assert.cmake)
+include(macros/RunInvoker.cmake)
 
+run("WasRun" "InvokeMethodTest")
 
-set(wasRun 0)
-message("wasRun = ${wasRun}")
-ASSERT_FALSE(${wasRun})
-run("WasRun" "WasRun")
-ASSERT_TRUE(${wasRun})
-message("wasRun = ${wasRun}")
 
