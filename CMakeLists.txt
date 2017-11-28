@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.9)
-include(WasRun/WasRun.cmake)
+include(RunInvoker.cmake)
+
 
 set(wasRun 0)
 message("wasRun = ${wasRun}")
-testMethod()
+run("WasRun" "WasRun")
 message("wasRun = ${wasRun}")
+
