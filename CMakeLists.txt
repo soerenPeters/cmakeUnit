@@ -5,5 +5,6 @@ include(macros/RunInvoker.cmake)
 
 run("WasRun" "InvokeMethodTest")
 run("WasRun" "SetUpTest")
+run("WasRun" "TearDownTest")
 
 
