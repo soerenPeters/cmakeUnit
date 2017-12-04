@@ -2,8 +2,10 @@
 function(TestResult)
 
 set(count "0" PARENT_SCOPE)
+set(error_count "0" PARENT_SCOPE)
 
 endfunction()
+
 
 function(testStarted ${count})
 
@@ -13,8 +15,16 @@ set(count "${count}" PARENT_SCOPE)
 endfunction()
 
 
-function (summary ${count})
+function(testFailed ${error_count})
 
-set(result "${count} run, 0 failed" PARENT_SCOPE)
+MATH(EXPR error_count "${error_count}+1")
+set(error_count "${error_count}" PARENT_SCOPE)
+
+endfunction()
+
+
+function (summary ${count} ${error_count})
+
+set(result "${count} run, ${error_count} failed" PARENT_SCOPE)
 
 endfunction()

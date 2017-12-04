@@ -10,5 +10,5 @@ run("tests" "methodTemplateTest" ${count})
 run("tests" "resultTest" ${count})
 run("tests" "brokenMethodTest" ${count})
 
-summary(${count})
+summary(${count} ${error_count})
 message("${result}")

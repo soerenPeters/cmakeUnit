@@ -18,5 +18,5 @@ endif()
 
 set(log ${log} PARENT_SCOPE)
 set(count ${count} PARENT_SCOPE)
-
+set(error_count ${error_count} PARENT_SCOPE)
 endfunction()
