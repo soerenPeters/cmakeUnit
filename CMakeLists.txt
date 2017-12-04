@@ -9,6 +9,7 @@ TestResult()
 run("tests" "methodTemplateTest" ${count})
 run("tests" "resultTest" ${count})
 run("tests" "brokenMethodTest" ${count})
+run("tests" "testSuiteTest" ${count})
 
 summary(${count} ${error_count})
 message("${result}")
