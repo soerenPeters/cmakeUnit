@@ -8,6 +8,7 @@ TestResult()
 
 run("tests" "methodTemplateTest" ${count})
 run("tests" "resultTest" ${count})
+run("tests" "brokenMethodTest" ${count})
 
 summary(${count})
 message("${result}")

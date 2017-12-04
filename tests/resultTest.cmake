@@ -1,4 +1,3 @@
-include(src/TestResult.cmake)
 
 function(testMethod)
 
