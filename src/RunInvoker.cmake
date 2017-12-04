@@ -3,7 +3,6 @@
 function(run folder fileName count)
 
 include("${folder}/${fileName}.cmake")
-include("src/TestResult.cmake")
 
 if(COMMAND setUp)
   setUp()

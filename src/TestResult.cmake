@@ -1,4 +1,9 @@
 
+function(TestResult)
+
+set(count "0" PARENT_SCOPE)
+
+endfunction()
 
 function(testStarted ${count})
 

@@ -2,8 +2,12 @@ cmake_minimum_required(VERSION 3.9)
 
 include(src/Assert.cmake)
 include(src/RunInvoker.cmake)
+include(src/TestResult.cmake)
 
+TestResult()
 
-run("tests" "methodTemplateTest" 0)
-run("tests" "resultTest" 0)
+run("tests" "methodTemplateTest" ${count})
+run("tests" "resultTest" ${count})
 
+summary(${count})
+message("${result}")
