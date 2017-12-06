@@ -5,10 +5,10 @@ function(testMethod)
 
   TestSuite()
 
-  addTest("tests/testSpys" "WasRun" ${count})
-  addTest("tests/testSpys" "BrokenMethod" ${count})
+  addAndRunTest("tests/testSpys" "WasRun" ${count})
+  addAndRunTest("tests/testSpys" "BrokenMethod" ${count})
 
-  runSuite()
+  summarizeSuite()
 
   ASSERT_STR_EQUAL("2 run, 1 failed" ${suite_result})
 

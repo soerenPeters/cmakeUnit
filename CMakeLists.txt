@@ -1,19 +1,14 @@
 cmake_minimum_required(VERSION 3.9)
 
-include(src/Assert.cmake)
-include(src/RunInvoker.cmake)
-include(src/TestResult.cmake)
 include(src/TestSuite.cmake)
 
 
-TestResult()
+TestSuite()
 
+addAndRunTest("tests" "methodTemplateTest" ${count})
+addAndRunTest("tests" "resultTest" ${count})
+addAndRunTest("tests" "brokenMethodTest" ${count})
+addAndRunTest("tests" "testSuiteTest" ${count})
 
-run("tests" "methodTemplateTest" ${count})
-run("tests" "resultTest" ${count})
-run("tests" "brokenMethodTest" ${count})
-run("tests" "testSuiteTest" ${count})
-
-summary(${count} ${error_count})
-message("${result}")
-
+summarizeSuite()
+message("${suite_result}") 

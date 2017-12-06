@@ -1,3 +1,8 @@
+
+include(src/Assert.cmake)
+include(src/RunInvoker.cmake)
+include(src/TestResult.cmake)
+
 #####################################################
 function(TestSuite)
 
@@ -8,7 +13,7 @@ function(TestSuite)
 endfunction()
 
 #####################################################
-function(addTest folder testName count)
+function(addAndRunTest folder testName count)
 
  run(${folder} ${testName} ${count})
 
@@ -18,7 +23,7 @@ function(addTest folder testName count)
 endfunction()
 
 #####################################################
-function(runSuite)
+function(summarizeSuite)
 
  summary(${count} ${error_count})
  set(suite_result "${result}" PARENT_SCOPE)
