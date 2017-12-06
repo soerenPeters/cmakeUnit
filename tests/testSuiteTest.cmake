@@ -1,15 +1,17 @@
-
+#####################################################
 function(testMethod)
 
-include(src/TestSuite.cmake)
+  include(src/TestSuite.cmake)
 
-TestSuite()
+  TestSuite()
 
-addTest("tests/testSpys" "WasRun" ${count})
-addTest("tests/testSpys" "BrokenMethod" ${count})
+  addTest("tests/testSpys" "WasRun" ${count})
+  addTest("tests/testSpys" "BrokenMethod" ${count})
 
-runSuite()
+  runSuite()
 
-ASSERT_STR_EQUAL("2 run, 1 failed" ${suite_result})
+  ASSERT_STR_EQUAL("2 run, 1 failed" ${suite_result})
 
 endfunction()
+
+#####################################################
