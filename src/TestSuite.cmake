@@ -23,7 +23,7 @@ function(addAndRunTest folder testName count)
 endfunction()
 
 #####################################################
-function(summarizeSuite)
+function(summarizeSuite count error_count)
 
  summary(${count} ${error_count})
  set(suite_result "${result}" PARENT_SCOPE)

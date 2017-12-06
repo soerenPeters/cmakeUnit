@@ -10,5 +10,5 @@ addAndRunTest("tests" "resultTest" ${count})
 addAndRunTest("tests" "brokenMethodTest" ${count})
 addAndRunTest("tests" "testSuiteTest" ${count})
 
-summarizeSuite()
+summarizeSuite(${count} ${error_count})
 message("${suite_result}") 

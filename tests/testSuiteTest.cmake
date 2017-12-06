@@ -8,7 +8,7 @@ function(testMethod)
   addAndRunTest("tests/testSpys" "WasRun" ${count})
   addAndRunTest("tests/testSpys" "BrokenMethod" ${count})
 
-  summarizeSuite()
+  summarizeSuite(${count} ${error_count})
 
   ASSERT_STR_EQUAL("2 run, 1 failed" ${suite_result})
 

@@ -15,10 +15,10 @@ function(testStarted count)
 endfunction()
 
 #####################################################
-function(testFailed error_count_arg reason_arg)
+function(testFailed error_count)
 
-  MATH(EXPR error_count_arg "${error_count_arg}+1")
-  set(error_count "${error_count_arg}" PARENT_SCOPE)
+  MATH(EXPR error_count "${error_count}+1")
+  set(error_count "${error_count}" PARENT_SCOPE)
 
 endfunction()
 
