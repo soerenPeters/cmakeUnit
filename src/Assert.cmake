@@ -574,9 +574,16 @@ endmacro()
 #
 # Notify a failing test thowing an error
 #
+
 macro(_ASSERT_THROW_FAILED_TEST reason)
-    testFailed(${error_count})
-    set(error_count ${error_count} PARENT_SCOPE)
+set(reason_arg ${reason})
+MESSAGE(STATUS "assert: ${reason}")
+
+set(error_count_arg ${error_count})
+testFailed(${error_count_arg} ${reason_arg})
+
+set(error_count ${error_count} PARENT_SCOPE)
+
 endmacro()
 
 ### END ###

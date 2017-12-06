@@ -1,8 +1,7 @@
 
+function(run folder_arg fileName count)
 
-function(run folder fileName count)
-
-include("${folder}/${fileName}.cmake")
+include("${folder_arg}/${fileName}.cmake")
 
 if(COMMAND setUp)
   setUp()

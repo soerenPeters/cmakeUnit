@@ -3,11 +3,13 @@ function(testMethod)
 
 include(src/TestSuite.cmake)
 
-addTest("tests" "WasRun")
-addTest("tests" "BrokenMethod")
+TestSuite()
 
-run()
+addTest("tests/testSpys" "WasRun" ${count})
+addTest("tests/testSpys" "BrokenMethod" ${count})
 
-ASSERT_STR_EQUAL("1 run, 1 failed" ${suite_result})
+runSuite()
+
+ASSERT_STR_EQUAL("2 run, 1 failed" ${suite_result})
 
 endfunction()
