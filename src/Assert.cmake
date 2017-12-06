@@ -576,13 +576,11 @@ endmacro()
 #
 
 macro(_ASSERT_THROW_FAILED_TEST reason)
-set(reason_arg ${reason})
-MESSAGE(STATUS "assert: ${reason}")
 
-set(error_count_arg ${error_count})
-testFailed(${error_count_arg} ${reason_arg})
+  set(reason_arg ${reason})
+  set(error_count_arg ${error_count})
 
-set(error_count ${error_count} PARENT_SCOPE)
+  testFailed(${error_count_arg} ${reason_arg})
 
 endmacro()
 
